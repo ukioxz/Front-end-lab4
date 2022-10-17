@@ -1,15 +1,17 @@
 #full_name{
   background-color: none;
+  cursor: pointer;
 }
 .my_date{
   background-color: none;
+  cursor: pointer;
 }
-.block{
+#block{
   position: relative;
   width: 600px;
   height: 300px;
-  background-color: black;
   margin: 20px;
+  object-fit: cover;
 }
 .buttons{
   position: relative;
