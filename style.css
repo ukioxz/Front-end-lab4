@@ -4,3 +4,18 @@
 .my_date{
   background-color: none;
 }
+.block{
+  position: relative;
+  width: 600px;
+  height: 300px;
+  background-color: black;
+  margin: 20px;
+}
+.buttons{
+  position: relative;
+  padding: 20px;
+}
+.bt{
+  position: relative;
+  margin:20px;
+}
