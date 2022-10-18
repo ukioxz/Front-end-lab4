@@ -7,6 +7,8 @@ let secondElem = document.querySelector('.my_date');
 let addBtn = document.querySelector('.bt1');
 let zoomBtn = document.querySelector('.bt2');
 let decrBtn = document.querySelector('.bt3');
+let delBtn = document.querySelector('.bt4');
+
 let img1 = document.getElementById('block');
 let fileI = document.getElementById('file1');
 
@@ -19,12 +21,17 @@ function save(){
 }
 img1.src = localStorage.getItem('myImage');
 
-
+let i = 0;
+let j = 10;
 zoomBtn.addEventListener('click',(event) => {
-  img1.style.width ="800px";
-  img1.style.height = "600px";
+  i++;
+  img1.style.transform = "scale(1."+ i +")";
 });
 decrBtn.addEventListener('click',(event) => {
+  j--;
+  img1.style.transform = "scale(0."+ j +")";
+});
+delBtn.addEventListener('click',(event) => {
   img1.style.width ="400px";
   img1.style.height = "200px";
 });
