@@ -12,17 +12,12 @@ let delBtn = document.querySelector('.bt4');
 let img1 = document.getElementById('block');
 let fileI = document.getElementById('file1');
 
-function save(){
-  let f = fileI.files[0];
-  if (f) {
-      img1.src = URL.createObjectURL(f);
-      localStorage.setItem('myImage', img1.src);
-  }
-}
-img1.src = localStorage.getItem('myImage');
-
 let i = 0;
 let j = 10;
+
+addBtn.addEventListener('click',(event) => {
+  img1.style.display = "block";
+});
 zoomBtn.addEventListener('click',(event) => {
   i++;
   img1.style.transform = "scale(1."+ i +")";
@@ -32,9 +27,10 @@ decrBtn.addEventListener('click',(event) => {
   img1.style.transform = "scale(0."+ j +")";
 });
 delBtn.addEventListener('click',(event) => {
-  img1.style.width ="400px";
-  img1.style.height = "200px";
+  img1.remove();
 });
+
+
 const randomSetColorFont = () => {
   let randomColor = '';
   for(let i = 0; i < 6; i++){
@@ -64,6 +60,8 @@ const randomSetColorBackClass = () => {
   }
   secondElem.style.background = "#"+randomColor;
 }
+
+
 firstElem.addEventListener('click',randomSetColorFont);
 firstElem.addEventListener('click',randomSetColorBack);
 secondElem.addEventListener('click',randomSetColorFontClass);
