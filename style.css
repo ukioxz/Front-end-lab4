@@ -6,13 +6,6 @@
   background-color: none;
   cursor: pointer;
 }
-#block_img{
-  position: relative;
-  width: 600px;
-  height: 300px;
-  margin: 20px;
-  object-fit: cover;
-}
 #block{
   position: relative;
   width: 600px;
@@ -23,4 +16,5 @@
 .buttons{
   position: relative;
   padding: 20px;
+  margin: 10px;
 }

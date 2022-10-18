@@ -10,7 +10,6 @@ let decrBtn = document.querySelector('.bt3');
 let delBtn = document.querySelector('.bt4');
 
 let img1 = document.getElementById('block');
-let fileI = document.getElementById('file1');
 
 let i = 0;
 let j = 10;
@@ -27,7 +26,7 @@ decrBtn.addEventListener('click',(event) => {
   img1.style.transform = "scale(0."+ j +")";
 });
 delBtn.addEventListener('click',(event) => {
-  img1.remove();
+  img1.style.display = "none";
 });
 
 
